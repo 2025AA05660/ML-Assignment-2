@@ -8,7 +8,7 @@ The goal of this project is to build multiple machine learning classification mo
 An interactive Streamlit web application is developed to demonstrate model performance and allow real-time testing using uploaded data.
 
 
-<h3>Dataset Description</h3>
+<h2>Dataset Description</h2>
 
 Dataset: Phishing Websites Dataset (UCI)
 
