@@ -9,6 +9,9 @@ from sklearn.metrics import (
     roc_auc_score, matthews_corrcoef, confusion_matrix, roc_curve
 )
 
+# Set page config
+st.set_page_config(page_title="Machine Learning Assignment 2 - Phishing Website Detection", layout="wide")
+
 # CSS
 
 st.markdown("""
@@ -235,4 +238,5 @@ if uploaded_file is not None:
         ax2.set_xlabel("False Positive Rate")
         ax2.set_ylabel("True Positive Rate")
         ax2.legend()
+
         st.pyplot(fig2)
