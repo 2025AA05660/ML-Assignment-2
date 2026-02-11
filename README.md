@@ -11,8 +11,11 @@ An interactive Streamlit web application is developed to demonstrate model perfo
 <h3>Dataset Description</h3>
 
 Dataset: Phishing Websites Dataset (UCI)
+
 Number of Instances: ~11,000
+
 Number of Features: 30
+
 Type: Binary Classification
 
 Each row represents one website and includes features such as:
