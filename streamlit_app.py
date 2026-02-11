@@ -32,8 +32,8 @@ st.markdown("""
 .section-title {
     font-size: 26px;
     font-weight: 600;
-    color: #FF4B4B;
-    border-left: 6px solid #FF4B4B;
+    color: #1f77ff;
+    border-left: 6px solid #1f77ff;
     padding-left: 12px;
     margin-top: 25px;
     margin-bottom: 10px;
@@ -121,7 +121,7 @@ This interface demonstrates an end-to-end phishing detection pipeline including 
 
 st.markdown("### Download sample test data")
 with open("test_data.csv", "rb") as f:
-    st.download_button("Download test CSV", f, "test_data.csv")
+    st.download_button("Download Test CSV", f, "test_data.csv")
 
 # Model mapping
 
@@ -134,7 +134,7 @@ model_files = {
     "XGBoost": "xgboost.pkl"
 }
 
-uploaded_file = st.file_uploader("Upload TEST CSV", type=["csv"])
+uploaded_file = st.file_uploader("Upload Test CSV", type=["csv"])
 
 model_name = st.selectbox("Select Model", list(model_files.keys()), key="model")
 
@@ -182,7 +182,7 @@ if uploaded_file is not None:
 
     # Performance Graph for Selected Model
 
-    st.subheader("Performance Metrics Graph (Selected Model)")
+    st.subheader("Performance Metrics Graph for Selected Model")
 
     metrics_dict = {
         "Accuracy": acc,

@@ -43,10 +43,24 @@ knn_model.fit(X_train, y_train)
 nb_model = GaussianNB()
 nb_model.fit(X_train, y_train)
 
-rf_model = RandomForestClassifier(n_estimators=200)
+rf_model = RandomForestClassifier(
+    n_estimators=150,
+    max_depth=12,
+    min_samples_split=4,
+    min_samples_leaf=2,
+    random_state=42
+)
 rf_model.fit(X_train, y_train)
 
-xgb_model = XGBClassifier(eval_metric="logloss")
+xgb_model = XGBClassifier(
+    n_estimators=250,
+    learning_rate=0.08,
+    max_depth=5,
+    subsample=0.9,
+    colsample_bytree=0.9,
+    random_state=42,
+    eval_metric="logloss"
+)
 xgb_model.fit(X_train, y_train)
 
 # Save Models
